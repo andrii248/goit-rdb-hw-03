@@ -1,0 +1,24 @@
+P1_1:
+select * from products
+
+P1_2:
+select name, phone from shippers
+
+P2:
+select avg(price) as avg_price, max(price) as max_price, min(price) as min_price from products
+
+P3:
+select avg(price) as avg_price, max(price) as max_price, min(price) as min_price 
+from products
+order by price desc
+limit 10
+
+P4:
+select count(id) 
+from products
+where price >= 20 and price <=100
+
+P5:
+select supplier_id, count(*) as product_qty, avg(price)
+from products
+group by supplier_id
